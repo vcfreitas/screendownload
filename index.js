@@ -4,7 +4,7 @@ var app = (function(){
     var app = express();
 
     //Configuração de Ambiante
-    app.set('port', 8080);
+    app.set('port', 8085);
 
     // Middleware
     app.use(express.static('public'));
