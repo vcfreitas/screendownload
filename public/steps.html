@@ -10,7 +10,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-
+    <script   src="https://code.jquery.com/jquery-2.2.2.min.js"   integrity="sha256-36cp2Co+/62rEAAYHLmRCPIych47CvdM+uTBJwSzWjI="   crossorigin="anonymous"></script>
     <style media="screen">
       .img-focanavenda {
         position: relative;
@@ -25,6 +25,23 @@
         width: 100% !important;
       }
     </style>
+    <script type="text/javascript">
+      $(document).ready(function() {
+
+        $('#btn-ios').click(function () {
+
+          $('#step-ios').show();
+          $('#step-android').hide();
+        });
+
+        $('#btn-android').click(function () {
+          $('#step-ios').hide();
+          $('#step-android').show();
+        });
+
+
+      });
+    </script>
     <title></title>
   </head>
   <body>
@@ -38,30 +55,68 @@
           <p>
             <a href="http://downloads.appsluiza.com.br/">Voltar</a>
           </p>
-          <h3>iPhone</h3>
-          <p>1 - Entre em ajustes > Geral</p>
-          <img src="images/geral.jpg" alt="" class="images" />
+          <div class="btn-group btn-group-justified" role="group" aria-label="...">
+            <div class="btn-group" role="group">
+              <button type="button" class="btn btn-default" id="btn-android">Android</button>
+            </div>
+            <div class="btn-group" role="group">
+              <button type="button" class="btn btn-default" id="btn-ios">iPhone</button>
+            </div>
+          </div>
           <br>
           <br>
-          <br>
-          <p>2 - Selecione a opção "Gerenciamento de dispositivos"</p>
-          <img src="images/gerenciar-disp.jpg" alt="" class="images" />
-          <br>
-          <br>
-          <br>
-          <p>3 - Selecione o app a ser permitido a instalação (#focanavenda ou #focacerto)</p>
-          <img src="images/select-app.jpg" alt="" class="images" />
-          <br>
-          <br>
-          <br>
-          <p>4 - Confirme a liberação e volte a tela inicial para abrir o app</p>
-          <img src="images/confirm.jpg" alt="" style="height: 150px "  />
-          <br>
-          <br>
-          <br>
-          <a type="button" href="itms-services://?action=download-manifest&amp;url=https://s3-sa-east-1.amazonaws.com/luizalabs-mobile-api/Foca+na+venda+app/focanavenda.plist"  class="btn btn-default btn-block" name="button">Download #focanavenda</a>
-          <a type="button" href=""  class="btn btn-default btn-block" name="button">Download #focacerto</a>
 
+          <div id="step-ios">
+            <h3>iPhone</h3>
+            <p>1 - Entre em ajustes > Geral</p>
+            <img src="images/geral.jpg" alt="" class="images" />
+            <br>
+            <br>
+            <br>
+            <p>2 - Selecione a opção "Gerenciamento de dispositivos"</p>
+            <img src="images/gerenciar-disp.jpg" alt="" class="images" />
+            <br>
+            <br>
+            <br>
+            <p>3 - Selecione o app a ser permitido a instalação (#focanavenda ou #focacerto)</p>
+            <img src="images/select-app.jpg" alt="" class="images" />
+            <br>
+            <br>
+            <br>
+            <p>4 - Confirme a liberação e volte a tela inicial para abrir o app</p>
+            <img src="images/confirm.jpg" alt="" style="height: 150px "  />
+            <br>
+            <br>
+            <br>
+            <a type="button" href="itms-services://?action=download-manifest&amp;url=https://s3-sa-east-1.amazonaws.com/luizalabs-mobile-api/Foca+na+venda+app/focanavenda.plist"  class="btn btn-default btn-block" name="button">Download #focanavenda</a>
+            <a type="button" href=""  class="btn btn-default btn-block" name="button">Download #focacerto</a>
+
+          </div>
+          <div id="step-android">
+            <h3>Android</h3>
+            <p>1 - Entre nas "Configuraçaões" de seu dispositivo e vá em "Segurança"</p>
+            <img src="images/seguranca.jpg" alt="" class="images" />
+            <br>
+            <br>
+            <br>
+            <p>2 - Habilite a opção "Fontes Desconhecidas" para habilitar a instalação do app</p>
+            <img src="images/fontes-desc.jpg" alt="" class="images" />
+            <br>
+            <br>
+            <br>
+            <p>3 - Vá na sua pasta de downloads e execute o aquivo focanavenda-latest.apk</p>
+            <img src="images/downloads.jpg" alt="" class="images"  />
+            <br>
+            <br>
+            <br>
+            <p>4 - Confirme a instalação</p>
+            <img src="images/install-app.jpg" alt="" class="images" />
+            <br>
+            <br>
+            <br>
+            <a type="button" href="http://downloads.appsluiza.com.br/focanavenda-latest.apk" class="btn btn-default btn-block" name="button">#focanavenda</a>
+            <a type="button" href="http://downloads.appsluiza.com.br/focacerto.apk" class="btn btn-default btn-block" name="button">#focacerto</a>
+          </div>
         </div>
       </div>
       <br><br><br><br>
