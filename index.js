@@ -7,7 +7,7 @@ var app = (function(){
     app.set('port', 8080);
 
     // Middleware
-    app.use(express.static('www'));
+    app.use(express.static('public'));
 
 
     return app;
