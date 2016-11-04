@@ -7,7 +7,6 @@ notifications:
 before_install:
   - chmod a+x ./scripts/start.sh
   - chmod a+x ./scripts/config_environment.sh
-script:
   - scripts/config_environment.sh  
   - scripts/start.sh
 deploy:
