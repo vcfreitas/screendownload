@@ -1,3 +1,5 @@
+export TRAVIS_TAG=stage
+
 if [ $TRAVIS_PULL_REQUEST ]; then
     export FOLDER=stage
     echo $FOLDER
