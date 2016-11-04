@@ -16,5 +16,5 @@ deploy:
   region: us-west-2
   upload-dir: teste
   local_dir: scripts
-  on:
-    all_branhes: true
+  on:  
+    all_branches: true
