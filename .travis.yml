@@ -17,4 +17,4 @@ deploy:
   upload-dir: teste
   local_dir: scripts
   on:
-    branch: release-v1.0.x
+    all_branhes: true
