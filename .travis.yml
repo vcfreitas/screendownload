@@ -15,4 +15,11 @@ deploy:
   bucket: "service-platform-hml"
   skip_cleanup: true
   region: us-west-2
+  upload-dir: teste
+  local_dir: scripts
+
+branches:
+  except:
+    - master
+
 
