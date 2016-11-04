@@ -17,8 +17,3 @@ deploy:
   region: us-west-2
   local_dir: application
 
-after_success:
-  # after deploy in s3
-branches:
-  except:
-    - master
