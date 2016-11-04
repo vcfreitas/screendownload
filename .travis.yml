@@ -16,7 +16,7 @@ deploy:
   secret_access_key: ${S3_SECRET_ACCESS_KEY}
   bucket: "service-platform-hml"
   region: us-west-2
-  upload-dir: "$FOLDER"
+  upload-dir: "upload-dir"
   local_dir: public
   on:  
     all_branches: true
