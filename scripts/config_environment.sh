@@ -1,7 +1,9 @@
-if [ ${TRAVIS_PULL_REQUEST} ]; then
+if [ $TRAVIS_PULL_REQUEST ]; then
     export FOLDER=stage
+    echo $FOLDER
 fi
 
-if [ ${TRAVIS_TAG} ]; then
+if [ $TRAVIS_TAG ]; then
     export FOLDER=prod
+    echo $FOLDER
 fi
