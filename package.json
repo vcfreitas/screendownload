@@ -1,6 +1,6 @@
 {
   "name": "screendownload",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Screen to download APK and IPA to Mobile Resultados",
   "main": "index.js",
   "scripts": {
