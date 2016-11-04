@@ -6,6 +6,7 @@ notifications:
     on_success: always
 before_install:
   - chmod a+x ./scripts/start.sh
+  - chmod a+x ./scripts/config_environment.sh
 script:
   - scripts/start.sh
 deploy:
@@ -14,7 +15,7 @@ deploy:
   secret_access_key: ${S3_SECRET_ACCESS_KEY}
   bucket: "service-platform-hml"
   region: us-west-2
-  upload-dir: teste
-  local_dir: scripts
+  upload-dir: ${FOLDER}
+  local_dir: public
   on:  
     all_branches: true
