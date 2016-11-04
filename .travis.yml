@@ -16,3 +16,5 @@ deploy:
   region: us-west-2
   upload-dir: teste
   local_dir: scripts
+  on:
+    branch: **
