@@ -19,3 +19,4 @@ deploy:
   local_dir: public
   on:  
     all_branches: true
+
