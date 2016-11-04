@@ -14,6 +14,8 @@ deploy:
   secret_access_key: ${S3_SECRET_ACCESS_KEY}
   bucket: "service-platform-hml"
   skip_cleanup: true
+  region: us-west-2
+  local_dir: application
 
 after_success:
   # after deploy in s3
