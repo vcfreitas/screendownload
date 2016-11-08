@@ -7,12 +7,11 @@ notifications:
 before_install:
   - chmod a+x ./scripts/config_environment.sh
   - scripts/config_environment.sh
-  - echo "$BUCKET"
+  - travis encrypt --add deploy.bucket 'services-platform-hml'
 deploy:
   provider: s3
   access_key_id: ${S3_ACCESS_KEY}
   secret_access_key: ${S3_SECRET_ACCESS_KEY}
-  bucket: ${BUCKET}
   region: us-west-2
   local_dir: public
   skip_cleanup: true
