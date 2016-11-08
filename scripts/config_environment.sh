@@ -1,11 +1,11 @@
 export TRAVIS_TAG=stage
 
 if [ $TRAVIS_PULL_REQUEST ]; then
-    export FOLDER=stage
-    echo $FOLDER
+    export BUCKET=service-platform-hml
+    echo $BUCKET
 fi
 
 if [ $TRAVIS_TAG ]; then
-    export FOLDER=prod
-    echo $FOLDER
+    export BUCKET=services-platform-prod
+    echo $BUCKET
 fi
