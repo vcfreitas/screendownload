@@ -11,7 +11,8 @@ deploy:
   provider: s3
   access_key_id: ${S3_ACCESS_KEY}
   secret_access_key: ${S3_SECRET_ACCESS_KEY}
-  bucket: echo ${BUCKET}
+  bucket: 
+    - echo ${BUCKET}
   region: us-west-2
   local_dir: public
   on:  
